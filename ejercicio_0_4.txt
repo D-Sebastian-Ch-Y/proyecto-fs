@@ -1,0 +1,41 @@
+title Ejercicio_0_4
+
+Navegador->Servidor: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over Servidor
+El servidor solicita al navegador
+realizar una nueva solicitud HTTP GET
+a la locación: /exampleapp/notes
+a través del código de estado HTTP 302
+end note
+
+Servidor-->Navegador: código de estado HTTP 302
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Servidor-->Navegador: HTML -code
+
+note over Navegador:
+El contenido del codigo html
+requiere buscar el archvo .css
+y el archivo de código .js
+end note
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Servidor-->Navegador: main.css
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Servidor-->Navegador: main.js
+
+note over Navegador
+El navegador ejecuta el 
+código js el cual requiere
+datos JSON del servidor
+end note
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Servidor-->Navegador: data.json
+
+note over Navegador
+El navegador ejecuta el código
+javascript con los datos JSON
+mostrandolos, en una lista, en
+la página
+end note
