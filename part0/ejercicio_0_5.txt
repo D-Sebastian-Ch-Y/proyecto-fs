@@ -1,0 +1,31 @@
+title Ejercicio_0_5
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Servidor-->Navegador: HTML code
+
+note over Navegador:
+El contenido del codigo html
+requiere buscar el archvo .css
+y el archivo de código .js
+end note
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Servidor-->Navegador: main.css
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Servidor-->Navegador: spa.js
+
+note over Navegador
+El navegador ejecuta el 
+código js el cual requiere
+datos JSON del servidor
+end note
+
+Navegador->Servidor: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Servidor-->Navegador: data.json
+
+note over Navegador
+El navegador ejecuta el código
+javascript con los datos JSON
+mostrándolos, en una lista, en
+la página
+end note
