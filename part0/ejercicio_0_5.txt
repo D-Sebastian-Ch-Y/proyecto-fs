@@ -16,7 +16,7 @@ Servidor-->Navegador: spa.js
 
 note over Navegador
 El navegador ejecuta el 
-código js el cual requiere
+código javascript el cual requiere
 datos JSON del servidor
 end note
 
